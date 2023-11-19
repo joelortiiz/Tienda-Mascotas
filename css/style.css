@@ -6,6 +6,9 @@
   font-family: mascota;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: gainsboro;
 }
@@ -14,7 +17,7 @@ body {
   min-width: 480px;
   max-width: 1330px;
   width: 100%;
-  background-image: url(../assets/images/home-bg.jpg);
+  /* background-image: url(../assets/images/home-bg.jpg); */
   background-position: center;
   background-size: contain;
   background-repeat: repeat;
@@ -58,6 +61,7 @@ body {
 .nav__link {
   text-decoration: none;
   color: black;
+  font-size: 1.5rem;
 }
 .logo {
   width: 300px;
@@ -99,10 +103,17 @@ body {
   padding: 1rem;
   color: white;
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
-  background-color: rgba(128, 128, 128, 0.251);
+  background-color: tomato;
+  font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px 2px;
-  width: 600px;
   /* background-image: url(); */
+  background-image: url(../assets/images/introo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.articleIntro__text {
+  margin-left: 15rem;
 }
 .section__descriptive-text {
   padding: 1rem;

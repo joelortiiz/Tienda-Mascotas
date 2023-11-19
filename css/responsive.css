@@ -1,0 +1,39 @@
+.button {
+    display: none;
+}
+
+@media screen and (min-width:480px){
+    .h1 {
+        text-align: center;
+    }
+    .container__header {
+        background-color: wheat;
+        width: 100%;
+        margin: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav__item {
+        margin: 0px 1rem;
+      }
+      .nav__link {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+      }
+    .article {
+        background-image: url();
+    }
+    .articleIntro__text {
+        margin: 0px;
+    }
+    .button {
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    
+}
