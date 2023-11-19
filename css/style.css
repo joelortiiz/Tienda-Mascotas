@@ -144,6 +144,7 @@ body {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(104, 104, 104, 0.297) 2px 2px;
   margin-bottom: 1rem;
+  width: 210px;
 }
 .container__vip1 {
   display: flex;
@@ -153,8 +154,7 @@ body {
 }
 .section3 {
   background-color: wheat;
-  width: 100%;
-  margin: 1rem;
+  margin: 1rem 1rem;
   border-radius: 2%;
   padding: 0.3rem;
   text-align: center;
@@ -183,6 +183,7 @@ body {
   padding: 0.3rem;
   margin: 1rem 0px;
   background-image: url(../assets/images/vip2.jpg);
+  background-position: center;
   background-size: cover;
 }
 .cardVIP__img {
@@ -230,7 +231,7 @@ body {
 }
 .vip1__item__dis {
   margin: 7px 0px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 230px;
   color: rgba(128, 128, 128, 0.6);
   text-decoration: line-through;
@@ -243,7 +244,7 @@ body {
   font-size: 1.3rem;
 }
 .h4 {
-  color: rgb(239, 153, 167);
+  color: pink;
   font-size: 1.7rem;
   text-shadow: rgba(0, 0, 0, 0.553) 2px 2px;
   text-decoration: underline;
@@ -251,4 +252,42 @@ body {
 }
 .aside {
   display: none;
+}
+.footer {
+  width: 100%;
+  background-color: pink;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+
+}
+.footer__item {
+  list-style: none;
+}
+.footer_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__h2 {
+  width: 190px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 1rem;
+  color: gold;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-shadow: black 1px 1px;
+  border: 2px solid gold;
+  border-radius: 3%;
+  text-decoration: underline;
+  padding: 0.5rem;
+}
+.footer__item {
+  margin: 1rem 0px;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
 }
