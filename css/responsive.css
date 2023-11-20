@@ -25,9 +25,7 @@
         color: black;
         font-size: 1.2rem;
       }
-    .article {
-        background-image: url();
-    }
+    
     .articleIntro__text {
         margin: 0px;
     }
@@ -35,5 +33,46 @@
         margin-top: 1rem;
         display: inline-block;
     }
+    .section2__cards {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card__img {
+        display: none;
+    }
+    .footer__cards {
+        display: none;
+    }
+    .footer {
+        flex-direction: column;
+
+    }
+    .footer__h2 {
+        font-size: 2.5rem;
+        width: 300px;
+    }
+    .footer__link {
+        font-size: 2rem;
+    }
+    
+}
+
+@media screen and (min-width:700px) {
+    .card__img {
+        display: inline-block;
+    }
+    .footer__cards {
+        display: inline-block;
+    }
+    .article {
+        background-image: url(../assets/images/introo.png);
+        margin: 0px 5rem;
+        padding: 3rem;
+    }
+}
+@media screen and (min-width: 1024px) {
     
 }

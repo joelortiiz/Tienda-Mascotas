@@ -13,7 +13,7 @@ body {
   background-color: gainsboro;
 }
 .container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   min-width: 480px;
   max-width: 1330px;
   width: 100%;
@@ -22,20 +22,49 @@ body {
   background-size: contain;
   background-repeat: repeat;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "header"
+  "introduction"
+  "services"
+  "affiliate"
+  "footer"
+  ;
 }
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-area: header;
+}
+.container__title {
+  display: flex;
+  margin-top: 25px;
+  border: 1px solid black;
+}
+.logo {
+  width: 400px;
+  height: 500px;
+  border: 3px solid black;
 }
 .h1 {
  /* color: rgb(212, 147, 147); */
  color: tomato;
-  margin-top: 75px;
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
   font-size: 4rem;
   margin-bottom: 0px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.h1:hover {
+  color: wheat;
+  text-decoration: underline;
+  transform: scale(1.1);
+  text-shadow: rgb(255, 255, 255) 2px 2px;
 }
 .container__header {
   background-color: wheat;
@@ -46,6 +75,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.502) 2px 2px;
 }
 .header__nav {
   display: flex;
@@ -57,6 +88,10 @@ body {
 }
 .nav__item {
   margin: 0px 1.5rem;
+  transition: 0.3s all ease;
+}
+.nav__item:hover {
+  transform: scale(1.2)
 }
 .nav__link {
   text-decoration: none;
@@ -73,6 +108,33 @@ body {
   padding: 0.5rem 1rem;
   background-color: wheat;
   border: 2px solid rgba(116, 116, 116, 0.418);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px;
+  
+}
+.button::before {
+  position: absolute;
+  content: "";
+  background-color: pink;
+  border: 2px solid black;
+  width: 200px;
+  height: 300px;
+  transform: translate(250px, -80px);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.button:hover::before {
+  
+  transform: translate(-30px, -10px);
+}
+.button:hover {
+  color: white;
+  border: 2px solid white;
+  text-shadow: black 1px 1px;
+  box-shadow: black 2px 2px;
 }
 .h2 {
   background-color: wheat;
@@ -91,6 +153,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-area: introduction;
 }
 .section2 {
     text-align: center;
@@ -98,6 +161,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    grid-area: services;
   }
 .article {
   padding: 1rem;
@@ -107,7 +171,7 @@ body {
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px 2px;
   /* background-image: url(); */
-  background-image: url(../assets/images/introo.png);
+  background-image: url();
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
@@ -115,17 +179,9 @@ body {
 .articleIntro__text {
   margin-left: 15rem;
 }
-.section__descriptive-text {
-  padding: 1rem;
-  color: white;
-  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
-  background-color: rgb(140, 108, 108);
-  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px 2px;
-  /* background-color: rgb(212, 147, 147); */
-}
+
 .section2__cards {
   background-color: wheat;
-  width: 430px;
   margin: 1rem;
   border-radius: 2%;
   flex: 1 1 13rem;
@@ -141,6 +197,11 @@ body {
   height: 250px;
   box-shadow: rgba(0, 0, 0, 0.491) 2px 2px 2px;
   border-radius: 3%;
+  transition: 0.4s all ease;
+}
+.card__img:hover {
+  transform: scale(1.1);
+ box-shadow: rgba(255, 255, 255, 0.432) 3px 3px 3px 3px;
 }
 .article__text {
   color: white;
@@ -149,14 +210,39 @@ body {
   font-size: 1.5rem;
 }
 .button2 {
-  color: rgb(0, 0, 0);
+  position: relative;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(104, 104, 104, 0.297) 2px 2px;
+  padding:1rem;
+  padding-bottom: 2rem;
+  background-color: tomato;
+  box-shadow: rgba(92, 0, 0, 0.829) 2px 2px 2px 2px;
   margin-bottom: 1rem;
-  width: 210px;
+  border: 0px;
+  z-index: 0;
+  overflow: hidden;
+
 }
+.button2::before {
+  position: absolute;
+  content: "";
+  background-color: skyblue;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  transform: translate(-70px, 80px);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+.button2:hover::before {
+  transform: translate(-70px, -20px);
+}
+.button2:hover {
+  text-shadow: black 1px 1px;
+  box-shadow:rgb(2, 21, 29) 2px 2px 2px 2px;
+  
+}
+
 .container__vip1 {
   display: flex;
   flex-wrap: wrap;
@@ -173,6 +259,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  grid-area: affiliate;
+}
+.section__descriptive-text {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 1) 2px 2px;
+  background-color: rgb(229, 229, 229);
+  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px 2px;
+  /* background-color: rgb(212, 147, 147); */
 }
 .section3__card1 {
   background-color: wheat;
@@ -254,6 +350,70 @@ body {
   text-shadow: black 1px 1px;
   font-size: 1.3rem;
 }
+.button3-1 {
+  background-color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.507) 2px 2px ;
+  border: 2px solid gray;
+  position: relative;
+  bottom: 0;
+  z-index: 0;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.button3-1::before {
+  position: absolute;
+  content: "";
+  background-color: gray;
+  width: 200px;
+  height: 300px;
+  transition: all 0.4s ease;
+  bottom: 100%;
+  right: 100%;
+  z-index: -1;
+}
+.button3-1:hover::before {
+  right: 0%;
+  bottom: 0%;
+}
+.button3-1:hover {
+  color: white;
+  border: 2px solid black;
+}
+.button3-2 {
+  background-color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.507) 2px 2px ;
+  border: 2px solid gray;
+  position: relative;
+  bottom: 0;
+  z-index: 0;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.button3-2::before {
+  position: absolute;
+  content: "";
+  background-color: gold;
+  width: 300px;
+  height: 300px;
+  transition: all 0.4s ease;
+  bottom: 100%;
+  right: 100%;
+  z-index: -1;
+}
+.button3-2:hover::before {
+  right: 0%;
+  bottom: 0%;
+}
+.button3-2:hover {
+  color: white;
+  border: 2px solid black;
+}
 .h4 {
   color: pink;
   font-size: 1.7rem;
@@ -270,6 +430,7 @@ body {
   padding: 1rem;
   display: flex;
   justify-content: space-around;
+  grid-area: footer;
 
 }
 .footer__item {
@@ -296,6 +457,11 @@ body {
 }
 .footer__item {
   margin: 1rem 0px;
+  transition: all 0.4s ease;
+
+}
+.footer__item:hover {
+  transform: translate(35px);
 }
 .footer__link {
   text-decoration: none;
