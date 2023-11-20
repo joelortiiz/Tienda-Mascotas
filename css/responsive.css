@@ -74,5 +74,10 @@
     }
 }
 @media screen and (min-width: 1024px) {
-    
+    .container__title {
+        width: 60%;
+    }
+    .logo {
+        display: block;
+    }
 }
