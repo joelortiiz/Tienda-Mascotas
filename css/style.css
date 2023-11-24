@@ -46,6 +46,22 @@ body {
   margin-top: 80px;
   text-align: center;
 }
+@keyframes titleanimation {
+  
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.3);
+    opacity: 1;
+    
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .logo {
   display: none;
   width: 100px;
@@ -72,17 +88,31 @@ body {
 .h1 {
  color: tomato;
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin: 0px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
-
+@keyframes titleanimation2 {
+  0% {
+    color: gold;
+  }
+  75% {
+    color: gold;
+  }
+  100% {
+    
+  }
+  
+}
 .h1:hover {
-  color: wheat;
+  color: gold;
   text-decoration: underline;
   transform: scale(1.1);
   text-shadow: rgb(255, 255, 255) 2px 2px;
+  margin-right: 1.5rem;
 }
 .container__header {
   background-color: wheat;
@@ -170,6 +200,8 @@ body {
   align-items: center;
   grid-area: introduction;
 }
+
+
 .section2 {
     text-align: center;
     display: flex;
@@ -190,7 +222,31 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
+
 }
+.animationloop {
+  animation-name: animationloop;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes section1animation {
+
+  from {
+    transform: translate(-1800px, 0px);
+    opacity: 0;
+  } to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+/* @keyframes animationloop {
+  from {
+    transform: translate(-300px);
+  } to {
+    transform: translate(300px);
+  }
+} */
 .articleIntro__text {
   margin-left: 15rem;
 }
@@ -199,8 +255,9 @@ body {
   background-color: wheat;
   margin: 1rem;
   border-radius: 2%;
-  flex: 1 1 13rem;
+  flex: 1 1 1rem;
   padding: 0.3rem;
+  
 }
 .h3 {
   color: tomato;
@@ -219,6 +276,10 @@ body {
  box-shadow: rgba(255, 255, 255, 0.432) 3px 3px 3px 3px;
 }
 .article__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: white;
   text-shadow: rgba(0, 0, 0, 1) 1px 1px;
   padding: 1rem;
@@ -227,9 +288,8 @@ body {
 .button2 {
   position: relative;
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding:1rem;
-  padding-bottom: 2rem;
   background-color: tomato;
   box-shadow: rgba(92, 0, 0, 0.829) 2px 2px 2px 2px;
   margin-bottom: 1rem;
@@ -281,10 +341,11 @@ body {
   font-size: 1.2rem;
   color: white;
   text-shadow: rgba(0, 0, 0, 1) 2px 2px;
-  background-color: rgb(229, 229, 229);
+  background-color: rgb(90, 90, 90);
   box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px 2px;
   /* background-color: rgb(212, 147, 147); */
 }
+
 .section3__card1 {
   background-color: wheat;
   box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 4px 4px;
@@ -396,6 +457,7 @@ body {
 .button3-1:hover {
   color: white;
   border: 2px solid black;
+  border-radius: 4%;
 }
 .button3-2 {
   background-color: white;
@@ -427,7 +489,9 @@ body {
 }
 .button3-2:hover {
   color: white;
+  text-shadow: black 1px 1px;
   border: 2px solid black;
+  border-radius: 4%;
 }
 .h4 {
   color: pink;
@@ -444,6 +508,7 @@ body {
   background-color: pink;
   padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   grid-area: footer;
 
@@ -463,9 +528,7 @@ body {
   margin: 0px;
   margin-top: 1rem;
   color: gold;
-  background-color: rgba(255, 255, 255, 0.6);
-  text-shadow: black 1px 1px;
-  border: 2px solid gold;
+ text-shadow: rgba(255, 255, 255, 0.5) 1px 0px;
   border-radius: 3%;
   text-decoration: underline;
   padding: 0.5rem;
