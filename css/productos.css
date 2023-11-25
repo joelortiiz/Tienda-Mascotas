@@ -45,7 +45,18 @@ html {
 #dog {
     color: tomato;
     font-size: 3rem;
-
+}
+#cat {
+    color: blue;
+    font-size: 3rem;
+}
+#fish {
+    color: yellow;
+    font-size: 3rem;
+}
+#bunny {
+    color: orange;
+    font-size: 3rem;
 }
 .card {
     display: flex;
@@ -58,6 +69,25 @@ html {
     text-align: center;
     width: 350px;
     background-color: white;
+    margin-bottom: 1rem;
+    animation-name: productos;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes productos {
+    0% {
+        opacity: 0;
+        transform: translate(-1000px) rotateY(360deg);
+    }
+    60% {
+        opacity: 0.6;
+        transform: translate(800px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
 .h3__product {
     color: black;
