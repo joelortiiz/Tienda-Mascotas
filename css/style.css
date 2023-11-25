@@ -172,7 +172,6 @@ body {
   z-index: -1;
 }
 .button:hover::before {
-  
   transform: translate(-30px, -10px);
 }
 .button:hover {
@@ -502,6 +501,30 @@ body {
 }
 .aside {
   display: none;
+  grid-area: aside;
+  text-align: center;
+
+  padding: 1rem;
+  /* background-color: white; */
+}
+.h2__aside {
+  color: black;
+  font-size: 2rem;
+  text-shadow: white 1px 1px;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+.img__aside {
+  width: 300px;
+  border-radius: 2%;
+  margin: 2rem 0px;
+  cursor: pointer;
+}
+.aside__card {
+  margin: 5rem 0px;
+  padding: 1rem;
+  border: 2px solid black;
+  background-color: antiquewhite;
 }
 .footer {
   width: 100%;

@@ -1,7 +1,33 @@
+.logo {
+  margin-left: 2rem;
+  display: block;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 20px;
+  right: 10px;
+}
+
 .breed__h2 {
   color: violet;
   font-size: 4rem;
   text-shadow: rgba(0, 0, 0, 0.575) 1px 1px;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.breed__h2-2 {
+  color: gold;
+  font-size: 4rem;
+  text-shadow: rgba(0, 0, 0, 0.575) 1px 1px;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.breed__h2-3 {
+  color: tomato;
+  font-size: 4rem;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
   margin: 0.5rem;
   display: flex;
   align-items: center;
@@ -11,7 +37,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: 1px solid green;
 }
 .breed__cards {
   display: flex;
@@ -19,6 +44,50 @@
   flex-direction: column;
   align-items: center;
   width: 400px;
+  height: 720px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(215, 175, 255, 1) 100%
+  );
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2%;
+  margin: 1rem;
+}
+.breed__cards2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 720px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(254, 255, 175) 100%
+  );
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2%;
+  margin: 1rem;
+}
+
+.breed__cards3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 720px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgb(255, 70, 70) 0%,
+    rgb(254, 254, 254) 100%
+  );
   background-color: white;
   padding: 1rem;
   border-radius: 2%;
@@ -28,16 +97,104 @@
   color: violet;
   text-shadow: black 1px 1px;
   font-size: 3rem;
+  text-align: center;
+  margin: 1rem;
+}
+.card__title2 {
+  color: gold;
+  text-shadow: black 1px 1px;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem;
+}
+.card__title3 {
+  color: tomato;
+  text-shadow: black 1px 1px;
+  font-size: 3rem;
+  text-align: center;
   margin: 1rem;
 }
 .logocat {
   width: 100px;
   height: 100px;
   margin-left: 2rem;
+  cursor: pointer;
+}
+
+.logocatanimation {
+  opacity: 0;
+  width: 100px;
+  border-radius: 50%;
+  animation-name: logocat;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+.logocatanimation-display {
+  display: none;
+}
+
+@keyframes logocat {
+  0% {
+    opacity: 0;
+    transform: rotate(980deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
 }
 .breed1 {
   width: 300px;
   height: 200px;
-  border: 1px solid rgba(128, 128, 128, 0.525);
-  box-shadow:rgba(0, 0, 0, 0.502) 1px 1px;
+  border-radius: 3%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(0, 0, 0, 0.306);
+}
+.breed1:hover {
+  width: 300px;
+  height: 200px;
+  border-radius: 3%;
+  box-shadow: none;
+  transform: scale(1.05);
+ }
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  border-radius: 1%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e5e5e5;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+.footer__cards {
+  display: inline-block;
 }
