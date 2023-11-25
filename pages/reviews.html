@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mascotas Joel</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/reviews.css">
 
   </head>
   <body>
@@ -18,13 +18,13 @@
                 <a href="../index.html" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="" class="nav__link">Breeds</a>
+                <a href="./razas.html" class="nav__link">Breeds</a>
               </li>
               <li class="nav__item">
-                <a href="" class="nav__link">Products</a>
+                <a href="./productos.html" class="nav__link">Products</a>
               </li>
               <li class="nav__item">
-                <a href="" class="nav__link">Reviews</a>
+                <a href="./reviews.html" class="nav__link">Reviews</a>
               </li>
               <li class="nav__item">
                 <a href="" class="nav__link">Contact</a>
@@ -39,7 +39,128 @@
               <a href="#title"><img src="../assets/images/logo.png" id="logo" alt="aasasasa" class="logo" ></a>
             </div>
       </header>
-      
+      <h2 class="h2__reviews">
+        
+      </h2>
+      <section class="review__container">
+        <article class="review">
+            <div class="review__card">
+                <div class="review__title">
+                    <h2>VIP Total Client</h2>
+                </div>
+                <div class="review__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vestibulum ipsum, ac cursus metus ullamcorper in. Fusce in ullamcorper justo. Proin nec lectus vel mauris fringilla sollicitudin.</p>
+                    <div class="review__rating">5/5</div>
+                </div>
+                <div class="review__author">
+                    <p>- Juan Pérez</p>
+                    <img src="../assets/images/user.png" class="user" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <div class="review__card">
+                <div class="review__title2">
+                    <h2>VIP Basic Client </h2>
+                </div>
+                <div class="review__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vestibulum ipsum, ac cursus metus ullamcorper in. Fusce in ullamcorper justo. Proin nec lectus vel mauris fringilla sollicitudin.</p>
+                    <div class="review__rating">4/5</div>
+                </div>
+                <div class="review__author">
+                    <p>- Juanita López</p>
+                    <img src="../assets/images/user.png" class="user" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <div class="review__card">
+                <div class="review__title3">
+                    <h2>Usual Client</h2>
+                </div>
+                <div class="review__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vestibulum ipsum, ac cursus metus ullamcorper in. Fusce in ullamcorper justo. Proin nec lectus vel mauris fringilla sollicitudin.</p>
+                    <div class="review__rating">4.5/5</div>
+                </div>
+                <div class="review__author">
+                    <p>- Bermejo Ruíz</p>
+                    <img src="../assets/images/user.png" class="user" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <div class="review__card">
+                <div class="review__title3">
+                    <h2>Usual Client</h2>
+                </div>
+                <div class="review__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vestibulum ipsum, ac cursus metus ullamcorper in. Fusce in ullamcorper justo. Proin nec lectus vel mauris fringilla sollicitudin.</p>
+                    <div class="review__rating">3/5</div>
+                </div>
+                <div class="review__author">
+                    <p>- Rafa Velasco</p>
+                    <img src="../assets/images/user.png" class="user" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <div class="review__card">
+                <div class="review__title2">
+                    <h2>VIP Basic Client </h2>
+                </div>
+                <div class="review__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vestibulum ipsum, ac cursus metus ullamcorper in. Fusce in ullamcorper justo. Proin nec lectus vel mauris fringilla sollicitudin.</p>
+                    <div class="review__rating">1/5</div>
+                </div>
+                <div class="review__author">
+                    <p>- Martina García</p>
+                    <img src="../assets/images/user.png" class="user" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="review">
+            <div class="review__card">
+                <div class="review__title">
+                    <h2>VIP Total Client</h2>
+                </div>
+                <div class="review__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula vestibulum ipsum, ac cursus metus ullamcorper in. Fusce in ullamcorper justo. Proin nec lectus vel mauris fringilla sollicitudin.</p>
+                    <div class="review__rating">4.9/5</div>
+                </div>
+                <div class="review__author">
+                    <p>- Juan Pérez</p>
+                    <img src="../assets/images/user.png" class="user" alt="">
+                </div>
+            </div>
+        </article>
+      </section>
+      <section class="container__form">
+        <div class="review__form">
+        <h2>Post a New Review</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" class="input" id="productName" name="productName" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="reviewText">Your Review</label>
+                <textarea class="textarea" id="reviewText" name="reviewText" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="authorName">Your Name</label>
+                <input type="text" class="input" id="authorName" name="authorName" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required class="input">
+            </div>
+
+            <button type="submit" class="button2">Submit Review</button>
+        </form>
+      </section>
       </main>
     </div>
     <footer class="footer">
